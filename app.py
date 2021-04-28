@@ -2,16 +2,17 @@
 
 #  MAIN MODULE #####
 from os import system
+from data import *
 
 
 class Product:
  pass
 
-def newProduct( name, price, quantity ):
+def newProduct( dictProduct ):
     product = Product()
-    product.name     = name
-    product.price    = price
-    product.quantity = quantity
+    product.name     = dictProduct["name"]
+    product.price    = dictProduct["price"]
+    product.quantity = dictProduct["quantity"]
     return product
 
 def printProduct( product ):
@@ -19,13 +20,15 @@ def printProduct( product ):
     print( product.name, product.price, product.quantity )
     print( "#"*10 )
 
-first_dish  = newProduct( "soup", 25, 3 )
-second_dish = newProduct( "salad", 19, 3 )
 
 system( "clear" )
 
-printProduct( first_dish )
-printProduct( second_dish )
+food1 = newProduct( first_dish )
+food2 = newProduct( second_dish )
+
+
+printProduct( food1 )
+printProduct( food2 )
 
 def compareProducts(prod1, prod2 ):
     if prod1.price != prod2.price:
@@ -35,5 +38,5 @@ def compareProducts(prod1, prod2 ):
     else:
        print("The selected dishes have the same price.")
 
-compareProducts( first_dish, second_dish )
+compareProducts( food1, food2 )
 
