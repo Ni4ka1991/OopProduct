@@ -1,16 +1,18 @@
 #!/usr/bin/env python3
 
 # data.py
+menu = [
 
-first_dish = {
-        "name"     : "Soup",
-        "price"    : 25,
-        "quantity" : 3
-  }
-
-
-second_dish = {
-        "name"     : "Salad Cesar",
-        "price"    : 29,
+{
+        "name"     : "Pizza",
+        "price"    : 45,
         "quantity" : 2
-  }
+ },
+
+
+{
+        "name"     : "Salad Cesar",
+        "price"    : 59,
+        "quantity" : 2
+}
+]

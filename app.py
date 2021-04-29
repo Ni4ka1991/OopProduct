@@ -8,11 +8,11 @@ from data import *
 class Product:
  pass
 
-def newProduct( dictProduct ):
+def newProduct( dictProduct, item ):
     product = Product()
-    product.name     = dictProduct["name"]
-    product.price    = dictProduct["price"]
-    product.quantity = dictProduct["quantity"]
+    product.name     = menu[item]["name"]
+    product.price    = menu[item]["price"]
+    product.quantity = menu[item]["quantity"]
     return product
 
 def printProduct( product ):
@@ -23,8 +23,8 @@ def printProduct( product ):
 
 system( "clear" )
 
-food1 = newProduct( first_dish )
-food2 = newProduct( second_dish )
+food1 = newProduct( menu, 0 )
+food2 = newProduct( menu, 1 )
 
 
 printProduct( food1 )
